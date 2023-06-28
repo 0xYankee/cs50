@@ -1,0 +1,27 @@
+sort1 uses: Bubble sort
+
+How do you know?: Bubble sort's Big O corresponds to `n` where it will be the fastest among the others. Hence, by sorting only the sort50000.txt file, I saw that sort1 has the fastest timing.
+
+sort2 uses: Merge sort
+
+How do you know?: Merge sort's Ω corresponds to `n log n` where it will be the fastest among the others. Hence, by sorting the random50000.txt file, I saw that sort2 has the faster timing compared to sort1.
+
+sort3 uses: Selection sort
+
+How do you know?: Selection sort's Big O corresponds to `n^2` where it will be the worst among the others. Hence, by sorting only the sort50000.txt file, I saw that sort3 has the worst timing.
+
+
+Notes:
+O -> Upper bound
+Ω -> Lower bound
+θ -> If upper and lower bound are similar
+
+| Selection sort | Bubble sort    | Merge sort     |
+| O n^2          | O n            | O n log n      |
+| Ω n^2          | Ω n^2          | Ω n log n      |
+| θ n^2          | θ -            | θ n log n      |
+
+Results:
+| sort1          | sort2          | sort3          |
+| ------------------sorted50000------------------- |
+| 0.25+ to 0.35+ | sort425/039/161| sort 3, 2.6, 0 |

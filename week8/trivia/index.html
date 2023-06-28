@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+            function check_1(element) {
+                let options = document.getElementsByClassName('option');
+
+                for (let i = 0; i < options.length; i++) {
+                    options[i].style.backgroundColor = "grey";
+                }
+
+                if (element.innerHTML === "50") {
+                    element.style.backgroundColor = "green";
+                    document.getElementById("p1_check").innerHTML = "Correct!";
+                }
+                else {
+                    element.style.backgroundColor = "red";
+                    document.getElementById("p1_check").innerHTML = "Incorrect.";
+                }
+            }
+
+            function check_2(element) {
+                let answer = document.getElementById("q2").value;
+                document.getElementById("q2").style.backgroundColor = "grey";
+
+                if (answer === "orange") {
+                    document.getElementById("q2").style.backgroundColor = "green";
+                    document.getElementById("p2_check").innerHTML = "Correct!";
+                }
+                else {
+                    document.getElementById("q2").style.backgroundColor = "red";
+                    document.getElementById("p2_check").innerHTML = "Incorrect.";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3>Q: What is 25 + 25?</h3>
+                <button type="button" class="option" id="q1_1" onclick="check_1(this)">51</button>
+                <button type="button" class="option" id="q1_2" onclick="check_1(this)">50</button>
+                <button type="button" class="option" id="q1_3" onclick="check_1(this)">52</button>
+                <p id="p1_check"></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>Q: What color will you get when you mix red and yellow?</h3>
+                <input type="text" id="q2"> <button type="button" id="s2" onclick="check_2(this)">Submit</button>
+                <p id="p2_check"></p>
+            </div>
+        </div>
+    </body>
+</html>

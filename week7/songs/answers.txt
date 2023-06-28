@@ -1,0 +1,5 @@
+If songs.db contains the top 100 songs of one listener from 2018, how would you characterize their audio aura?
+I would characterize their audio aura as cheerful but not very attractive because the scores are 0.72 for danceability, 0.66 for energy and 0.48 for valence.
+
+Hypothesize about why the way you’ve calculated this aura might not be very representative of the listener. What better ways of calculating this aura would you propose?
+It might not an accurate representation of the listener because it is taking an average of those data types, where the data set could have a large deviation such as only 0.1s and 0.9s. A better way of calculating an aura can rely on multiple sets of data by taking the mean, median, mode and standard deviation of the data to consider more cases.

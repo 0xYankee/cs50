@@ -1,0 +1,35 @@
+/* Size for brand */
+nav .navbar-brand
+{
+    font-size: xx-large;
+}
+
+/* Colors for brand */
+nav .navbar-brand .blue
+{
+    color: #537fbe;
+}
+nav .navbar-brand .red
+{
+    color: #ea433b;
+}
+nav .navbar-brand .yellow
+{
+    color: #f5b82e;
+}
+nav .navbar-brand .green
+{
+    color: #2e944b;
+}
+
+/* Add animation and keyframes for auto-closing */
+@keyframes closeBanner {
+    0% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { opacity: 0; height: 0; padding: 0; margin: 0; }
+}
+
+.auto-close {
+    animation: closeBanner 5s linear forwards;
+    /* Adjust the animation duration (5s) to your desired auto-close time */
+}

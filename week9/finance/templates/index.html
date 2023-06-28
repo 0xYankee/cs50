@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Portfolio
+{% endblock %}
+
+{% block main %}
+    {% if purchase_success %}
+    <div class="alert alert-success alert-dismissible fade show auto-close" role="alert">
+        {{ stock_symbol }} bought for {{ total_cost }}
+    </div>
+    {% endif %}
+    {% if sell_success %}
+    <div class="alert alert-danger alert-dismissible fade show auto-close" role="alert">
+        {{ sell_symbol }} sold for {{ total_pnl }}
+    </div>
+    {% endif %}
+
+    <h1>Portfolio</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Symbol</th>
+                <th scope="col">Shares</th>
+                <th scope="col">Total Price</th>
+                <th scope="col">Average Price</th>
+                <th scope="col">Current Price</th>
+                <th scope="col">Profit/Loss</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for stock in portfolio %}
+                <tr {% if stock.profit_loss > 0 %}class="table-success"{% elif stock.profit_loss < 0 %}class="table-danger"{% endif %}>
+                    <td>{{ stock.symbol }}</td>
+                    <td>{{ stock.shares }}</td>
+                    <td>{{ stock.price }}</td>
+                    <td>{{ stock.average_price }}</td>
+                    <td>{{ stock.current_price }}</td>
+                    <td>{{ stock.profit_loss }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+        <thead>
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th scope="col">Cash</th>
+            </tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="table-bordered border-primary">{{ remaining_cash }}</td>
+                </tr>
+        </tbody>
+    </table>
+{% endblock %}

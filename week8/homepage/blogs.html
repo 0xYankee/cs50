@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Castoro+Titling&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <title>Welcome to YY's Blog</title>
+    <script>
+      // Define navigateToBlog function to redirect to the specified blog page
+      function navigateToBlog(blogPath) {
+        window.location.href = "/blog/" + blogPath;
+      }
+    </script>
+  </head>
+
+  <body class="home">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="nav nav-pills justify-content-center">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="blogs.html">Blog</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Social Media</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="https://twitter.com/0xYankee/" target="_blank">Twitter</a></li>
+                <li><a class="dropdown-item" href="https://0xyankee.substack.com/" target="_blank">Substack</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="image.html">Buy me a coffee</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!--Gutter-->
+    <div class="container overflow-hidden text-center">
+      <div class="row gy-5">
+        <div class="col-6">
+          <div class="p-3 bg-hidden"></div>
+        </div>
+        <div class="col-6">
+          <div class="p-3 bg-hidden"></div>
+        </div>
+      </div>
+    </div>
+
+    <!--Card groups-->
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <div class="col">
+        <div class="card h-100" onclick="navigateToBlog('about.html')">
+          <img src="img/about.svg" alt="This is the image card for the article 'About'." class="card-img-top">
+          <div class="card-body">
+            <p class="card-text">Read about what is written in this blog.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100" onclick="navigateToBlog('cryptocurrency.html')">
+          <img src="img/cryptocurrency.svg" alt="This is the image card for the article 'Cryptocurrency'." class="card-img-top">
+          <div class="card-body">
+            <p class="card-text">Understanding the idea of crypto and financial vehicles such as currencies.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100">
+          <img src="img/coming_soon.svg" alt="This is the image card for an article that is yet to be released but coming soon." class="card-img-top">
+          <div class="card-body">
+            <p class="card-text">This article is coming soon.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

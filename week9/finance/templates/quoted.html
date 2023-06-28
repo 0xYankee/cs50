@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quoted Stocks
+{% endblock %}
+
+{% block main %}
+    <h1>Quoted</h1>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">-</th>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Symbol</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="table-info">
+            <th scope="row">-</th>
+            <td>{{ name }}</td>
+            <td>{{ price }}</td>
+            <td>{{ symbol }}</td>
+          </tr>
+        </tbody>
+      </table>
+
+    <form action="/quote" method="post">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="symbol" name="symbol" placeholder="Symbol" type="text">
+        </div>
+        <button class="btn btn-primary" type="submit">Quote</button>
+    </form>
+{% endblock %}
